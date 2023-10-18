@@ -1,11 +1,17 @@
-import { AuthProvider } from "./context/AuthContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import Home from "./components/Home";
+import { store } from "../store";
+
 function App() {
   return (
-    <AuthProvider>
-      <div className="w-screen h-screen bg-zinc-800 text-white">
-        <h1>Hello</h1>
-      </div>
-    </AuthProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
