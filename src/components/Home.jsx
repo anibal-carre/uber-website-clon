@@ -1,6 +1,10 @@
 import { useState } from "react";
 import NavBar from "./NavBar";
 import { motion } from "framer-motion";
+import ArrowDown from "./icons/ArrowDown";
+import DotsIcon from "./icons/DotsIcon";
+import WorldIcon from "./icons/WorldIcon";
+import Menu from "./Menu";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,21 +13,7 @@ const Home = () => {
   return (
     <div className="w-screen h-screen flex flex-col bg-zinc-800 text-white relative z-10">
       <NavBar menuOpen={menuOpen} handleMenuOpen={handleMenuOpen} />
-      {menuOpen && (
-        <motion.div
-          animate={{ y: 0 }}
-          initial={{ y: -1000 }}
-          transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
-          className="bg-white w-full h-full absolute top-14 left-0 transition-all z-5"
-        >
-          {/* Contenido del menú */}
-          <ul className="py-2 px-4">
-            <li className="hover:bg-gray-200 text-black">Opción 1</li>
-            <li className="hover:bg-gray-200 text-black">Opción 2</li>
-            <li className="hover:bg-gray-200 text-black">Opción 3</li>
-          </ul>
-        </motion.div>
-      )}
+      {menuOpen && <Menu />}
       <h1>hello</h1>
     </div>
   );

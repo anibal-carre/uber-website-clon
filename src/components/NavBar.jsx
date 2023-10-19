@@ -9,8 +9,8 @@ import DotsIcon from "./icons/DotsIcon";
 
 const NavBar = ({ menuOpen, handleMenuOpen }) => {
   return (
-    <header className="w-full h-16 flex justify-center items-center px-2 md:px-14 bg-black text-white text-[16px] z-10">
-      <div className="w-full max-w-[1400px] h-16 flex justify-between items-center px-5 md:px-6 xl:px-14 bg-black text-white text-[16px] z-10">
+    <header className="w-full h-16 flex justify-center items-center px-0 md:px-14 bg-black text-white text-[16px] z-10">
+      <div className="w-full max-w-[1400px] h-16 flex justify-between items-center px-4 md:px-6 xl:px-14 bg-black text-white text-[16px] z-10">
         <div className="h-auto w-[50%] flex justify-start items-center gap-8">
           {" "}
           <div className="w-[50px] h-[40px]">
@@ -29,7 +29,7 @@ const NavBar = ({ menuOpen, handleMenuOpen }) => {
           </nav>
         </div>
 
-        <div className="h-12 w-[50%] flex items-center justify-end text-[14px] gap-3 md:gap-5">
+        <div className="h-12 w-[50%] flex items-center justify-end text-[14px] gap-1 md:gap-5">
           <div className="hidden md:flex gap-2 items-center">
             <WorldIcon />
             <span className="font-[500] cursor-pointer">EN</span>
@@ -49,7 +49,11 @@ const NavBar = ({ menuOpen, handleMenuOpen }) => {
 
           <button
             onClick={handleMenuOpen}
-            className="bg-black md:hidden w-[36px] h-[36px] flex justify-center items-center rounded-full"
+            className={
+              menuOpen
+                ? ` md:hidden w-[40px] h-[36px] flex justify-center items-center rounded-full bg-zinc-700 px-3 py-2`
+                : `bg-black md:hidden w-[40px] h-[36px] flex justify-center items-center rounded-full px-3 py-2`
+            }
           >
             {!menuOpen ? <MenuIcon /> : <CloseIcon />}
           </button>
