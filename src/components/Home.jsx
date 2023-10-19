@@ -5,16 +5,17 @@ import ArrowDown from "./icons/ArrowDown";
 import DotsIcon from "./icons/DotsIcon";
 import WorldIcon from "./icons/WorldIcon";
 import Menu from "./Menu";
+import HeroSection from "./HeroSection";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuOpen = () => setMenuOpen(!menuOpen);
   return (
-    <div className="w-screen h-screen flex flex-col bg-zinc-800 text-white relative z-10">
+    <div className="w-screen h-screen flex flex-col bg-white text-white relative z-10">
       <NavBar menuOpen={menuOpen} handleMenuOpen={handleMenuOpen} />
       {menuOpen && <Menu />}
-      <h1>hello</h1>
+      <HeroSection />
     </div>
   );
 };
