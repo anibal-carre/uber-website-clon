@@ -8,7 +8,7 @@ import CloseIcon from "./CloseIcon";
 
 const NavBar = ({ menuOpen, handleMenuOpen }) => {
   return (
-    <header className="w-full h-20 md:h-auto flex justify-between items-center border px-5 md:px-10 bg-white text-black text-[14px] md:text-[18px]">
+    <header className="w-full h-20 md:h-auto flex justify-between items-center px-5 md:px-10 bg-black text-white text-[14px] md:text-[18px] z-10">
       <div className="h-auto w-[20%] md:w-[15%] flex justify-center">
         {" "}
         <UberLogo />
@@ -43,7 +43,7 @@ const NavBar = ({ menuOpen, handleMenuOpen }) => {
 
         <button
           onClick={handleMenuOpen}
-          className="bg-white w-[36px] h-[36px] flex justify-center items-center rounded-full"
+          className="bg-black md:hidden w-[36px] h-[36px] flex justify-center items-center rounded-full"
         >
           {!menuOpen ? <MenuIcon /> : <CloseIcon />}
         </button>
