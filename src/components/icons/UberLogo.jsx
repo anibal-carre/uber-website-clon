@@ -1,9 +1,10 @@
 const UberLogo = () => {
   return (
     <svg
+      className="xl:w-[50px] xl:h-[40px]"
       xmlns="http://www.w3.org/2000/svg"
-      width="100"
-      height="90"
+      width="43"
+      height="40"
       viewBox="0 0 355 120"
       fill="none"
     >

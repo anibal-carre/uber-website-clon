@@ -1,52 +1,59 @@
 import { Link } from "react-router-dom";
-import UberLogo from "./UberLogo";
-import { BiUser } from "react-icons/bi";
-import { TbWorld } from "react-icons/tb";
-import MenuIcon from "./MenuIcon";
+import UberLogo from "./icons/UberLogo";
+import MenuIcon from "./icons/MenuIcon";
 
-import CloseIcon from "./CloseIcon";
+import CloseIcon from "./icons/CloseIcon";
+import WorldIcon from "./icons/WorldIcon";
+import ArrowDown from "./icons/ArrowDown";
+import DotsIcon from "./icons/DotsIcon";
 
 const NavBar = ({ menuOpen, handleMenuOpen }) => {
   return (
-    <header className="w-full h-20 md:h-auto flex justify-between items-center px-5 md:px-10 bg-black text-white text-[14px] md:text-[18px] z-10">
-      <div className="h-auto w-[20%] md:w-[15%] flex justify-center">
-        {" "}
-        <UberLogo />
-      </div>
-
-      <nav className="hidden md:flex md:justify-center md:w-[70%] md:gap-10 2xl:gap-14">
-        <Link className="font-semibold" to={"/"}>
-          Home
-        </Link>
-        <Link className="font-semibold" to={"/"}>
-          Our products
-        </Link>
-        <Link className="font-semibold" to={"/"}>
-          Our company
-        </Link>
-        <Link className="font-semibold" to={"/"}>
-          Safety
-        </Link>
-        <Link className="font-semibold" to={"/"}>
-          Help
-        </Link>
-      </nav>
-      <div className="h-12 w-[70%] md:w-[15%] flex items-center justify-end md:justify-center gap-3 md:gap-4">
-        <div className="flex gap-2 items-center">
-          <TbWorld className="text-[22px] cursor-pointer" />
-          <span className="font-semibold cursor-pointer">EN</span>
-        </div>
-        <div className="flex gap-2 items-center">
-          <BiUser className="text-[22px] cursor-pointer" />
-          <span className="font-semibold cursor-pointer">Log In</span>
+    <header className="w-full h-16 flex justify-center items-center px-2 md:px-14 bg-black text-white text-[16px] z-10">
+      <div className="w-full max-w-[1400px] h-16 flex justify-between items-center px-5 md:px-6 xl:px-14 bg-black text-white text-[16px] z-10">
+        <div className="h-auto w-[50%] flex justify-start items-center gap-8">
+          {" "}
+          <div className="w-[50px] h-[40px]">
+            <UberLogo />
+          </div>
+          <nav className="hidden md:flex h-full md:gap-8">
+            <Link className="font-[500] text-[14px] flex gap-1" to={"/"}>
+              Company <ArrowDown />
+            </Link>
+            <Link className="font-[500] text-[14px]" to={"/"}>
+              Safety
+            </Link>
+            <Link className="font-[500] text-[14px]" to={"/"}>
+              Help
+            </Link>
+          </nav>
         </div>
 
-        <button
-          onClick={handleMenuOpen}
-          className="bg-black md:hidden w-[36px] h-[36px] flex justify-center items-center rounded-full"
-        >
-          {!menuOpen ? <MenuIcon /> : <CloseIcon />}
-        </button>
+        <div className="h-12 w-[50%] flex items-center justify-end text-[14px] gap-3 md:gap-5">
+          <div className="hidden md:flex gap-2 items-center">
+            <WorldIcon />
+            <span className="font-[500] cursor-pointer">EN</span>
+          </div>
+          <div className="hidden md:flex gap-2 items-center">
+            <DotsIcon />
+            <span className="font-[500] cursor-pointer">Products</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <button className="font-[500] cursor-pointer flex justify-center w-[70px] p-2 hover:bg-zinc-800 rounded-full">
+              Log in
+            </button>
+            <button className="font-[500] text-black cursor-pointer flex justify-center w-[70px] p-2 bg-white hover:bg-zinc-200 rounded-full">
+              Sign up
+            </button>
+          </div>
+
+          <button
+            onClick={handleMenuOpen}
+            className="bg-black md:hidden w-[36px] h-[36px] flex justify-center items-center rounded-full"
+          >
+            {!menuOpen ? <MenuIcon /> : <CloseIcon />}
+          </button>
+        </div>
       </div>
     </header>
   );

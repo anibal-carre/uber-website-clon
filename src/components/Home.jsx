@@ -14,7 +14,7 @@ const Home = () => {
           animate={{ y: 0 }}
           initial={{ y: -1000 }}
           transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
-          className="bg-white w-full h-full absolute top-20 left-0 transition-all z-5"
+          className="bg-white w-full h-full absolute top-14 left-0 transition-all z-5"
         >
           {/* Contenido del menú */}
           <ul className="py-2 px-4">
