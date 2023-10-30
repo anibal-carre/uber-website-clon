@@ -1,0 +1,18 @@
+.css-kWlJJe {
+  background-image: url(https://www.uber-assets.com/image/upload/v1614379346/assets/f4/63ca3e-b0d7-4463-988f-a2fead503ddc/original/DotCom_Update_U4B_bg_mobileD.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .css-kWlJJe {
+    background-image: url(https://www.uber-assets.com/image/upload/v1613522699/assets/28/5b0222-7869-4658-b2ca-80a3890a2b69/original/DotCom_Update_U4B_bg_ipad.png);
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .css-kWlJJe {
+    background-image: url(https://www.uber-assets.com/image/upload/v1613106985/assets/0e/47aa71-35cb-459a-a975-78c61ea300e2/original/HP-U4B-NYC-bkg.png);
+  }
+}

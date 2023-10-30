@@ -1,8 +1,11 @@
 import driver from "../assets/driver.webp";
+import city from "../assets/city.webp";
+import StartedSection from "./StartedSection";
+
 const HeroSection = () => {
   return (
-    <section className="w-full flex flex-col text-black">
-      <div className="w-full flex flex-col">
+    <section className="w-full h-auto flex flex-col text-black lg:relative">
+      <div className="w-full flex flex-col lg:w-[576px] lg:z-10 lg:absolute lg:top-[40px] lg:left-[10%] xl:top-[40px] xl:left-[12%] 2xl:left-[10%] bg-white lg:h-[539px]">
         <div className="w-full flex gap-8 px-4 border-b">
           <div className="flex flex-col justify-center items-center w-[80px] h-[130px] gap-4">
             <img
@@ -53,19 +56,23 @@ const HeroSection = () => {
           <p className="w-full mb-6">
             Drive on the platform with the largest network of active riders.
           </p>
-          <button className="self-start w-[160px] h-[48px] rounded-md bg-black text-white mb-4">
-            Sign up to drive
-          </button>
+          <div className="flex flex-col md:flex-row md:items-center gap-3">
+            <button className="self-start w-[160px] h-[48px] rounded-md bg-black text-white mb-4">
+              Sign up to drive
+            </button>
 
-          <span>
-            Learn more about driving and delivering
-            <div className="w-[294px] h-[1px] bg-zinc-300"></div>
-          </span>
+            <span>
+              Learn more about driving and delivering
+              <div className="w-[294px] h-[1px] bg-zinc-300"></div>
+            </span>
+          </div>
         </div>
       </div>
-      <div className="border w-full h-[290px] md:h-[500px] 2xl:h-[660px]">
+      <div className="w-full h-[292px] md:h-[500px] lg:h-[667px]">
         <img src={driver} alt="driver-img" className="w-full h-full" />
       </div>
+
+      <StartedSection />
     </section>
   );
 };
