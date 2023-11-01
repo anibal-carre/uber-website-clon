@@ -1,8 +1,8 @@
 import "./StartedSection.css";
 const StartedSection = () => {
   return (
-    <div className="css-kWlJJe w-full h-[320px] xl:h-[300px] top-[50%] left-[50%] p-6 py-12 md:flex md:justify-center">
-      <div className="max-w-[1150px]">
+    <div className="css-kWlJJe w-full h-[320px] xl:h-[300px] top-[50%] left-[50%] p-6 py-12 md:flex lg:justify-center">
+      <div className="w-full max-w-[1400px] lg:pl-[120px]">
         <h2
           className="text-[28px] font-bold mb-6"
           style={{ lineHeight: "36px" }}
