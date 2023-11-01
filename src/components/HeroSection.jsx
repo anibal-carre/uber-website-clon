@@ -2,6 +2,7 @@ import driver from "../assets/driver.webp";
 import city from "../assets/city.webp";
 import StartedSection from "./StartedSection";
 import { useState } from "react";
+import InfoSection from "./InfoSection";
 
 const HeroSection = () => {
   const [selectOption, setSelectOption] = useState("drive");
@@ -114,6 +115,7 @@ const HeroSection = () => {
       </div>
 
       <StartedSection />
+      <InfoSection />
     </section>
   );
 };
