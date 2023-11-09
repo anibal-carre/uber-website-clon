@@ -1,11 +1,15 @@
 import driver from "../assets/driver.webp";
-import city from "../assets/city.webp";
+import ride from "../assets/ride.webp";
+import rent from "../assets/rent.webp";
 import StartedSection from "./StartedSection";
 import { useState } from "react";
 import InfoSection from "./InfoSection";
+import Drive from "./NavOptions/Drive";
+import Ride from "./NavOptions/Ride";
+import Rent from "./NavOptions/Rent";
 
 const HeroSection = () => {
-  const [selectOption, setSelectOption] = useState("drive");
+  const [selectOption, setSelectOption] = useState("ride");
 
   const changeOption = (e) => {
     setSelectOption(e);
@@ -67,51 +71,48 @@ const HeroSection = () => {
             <div
               className={
                 selectOption === "drive"
-                  ? "h-[3px] w-[70px] lg:w-[80px] bg-black"
-                  : "h-[3px] w-[70px] lg:w-[80px] invisible"
+                  ? "h-[4px] w-[70px] lg:w-[80px] bg-black"
+                  : "h-[4px] w-[70px] lg:w-[80px] invisible"
               }
             ></div>
             <div
               className={
                 selectOption === "ride"
-                  ? "h-[3px] w-[70px] lg:w-[80px] bg-black"
-                  : "h-[3px] w-[70px] lg:w-[80px] invisible"
+                  ? "h-[4px] w-[70px] lg:w-[80px] bg-black"
+                  : "h-[4px] w-[70px] lg:w-[80px] invisible"
               }
             ></div>
             <div
               className={
                 selectOption === "rent"
-                  ? "h-[3px] w-[70px] lg:w-[80px] bg-black"
-                  : "h-[3px] w-[70px] lg:w-[80px] invisible"
+                  ? "h-[4px] w-[70px] lg:w-[80px] bg-black"
+                  : "h-[4px] w-[70px] lg:w-[80px] invisible"
               }
             ></div>
           </div>
-          <div className="w-full flex flex-col px-6 py-8">
-            <h2
-              className="font-bold text-[36px] mb-6"
-              style={{ lineHeight: "44px" }}
-            >
-              Get in the driver's seat and get paid
-            </h2>
-
-            <p className="w-full mb-6">
-              Drive on the platform with the largest network of active riders.
-            </p>
-            <div className="flex flex-col md:flex-row md:items-center gap-3">
-              <button className="self-start w-[160px] h-[48px] rounded-md bg-black text-white mb-4">
-                Sign up to drive
-              </button>
-
-              <span>
-                Learn more about driving and delivering
-                <div className="w-[294px] h-[1px] bg-zinc-300"></div>
-              </span>
-            </div>
-          </div>
+          {selectOption === "drive" ? <Drive /> : ""}
+          {selectOption === "ride" ? <Ride /> : ""}
+          {selectOption === "rent" ? <Rent /> : ""}
         </div>
       </div>
       <div className="w-full h-[292px] md:h-[500px] lg:h-[667px] xl:h-[675px]">
-        <img src={driver} alt="driver-img" className="w-full h-full" />
+        {selectOption === "drive" ? (
+          <img src={driver} alt="driver-img" className="w-full h-full" />
+        ) : (
+          ""
+        )}
+
+        {selectOption === "ride" ? (
+          <img src={ride} alt="driver-img" className="w-full h-full" />
+        ) : (
+          ""
+        )}
+
+        {selectOption === "rent" ? (
+          <img src={rent} alt="driver-img" className="w-full h-full" />
+        ) : (
+          ""
+        )}
       </div>
 
       <StartedSection />
