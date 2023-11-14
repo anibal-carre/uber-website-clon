@@ -7,6 +7,7 @@ import InfoSection from "./InfoSection";
 import Drive from "./NavOptions/Drive";
 import Ride from "./NavOptions/Ride";
 import Rent from "./NavOptions/Rent";
+import AboutSection from "./AboutSection";
 
 const HeroSection = () => {
   const [selectOption, setSelectOption] = useState("ride");
@@ -117,6 +118,7 @@ const HeroSection = () => {
 
       <StartedSection />
       <InfoSection />
+      <AboutSection />
     </section>
   );
 };

@@ -7,10 +7,10 @@ const Arrow = () => {
       height="16px"
       fill="currentColor"
       viewBox="0 0 24 24"
-      tabindex="0"
+      tabIndex={"0"}
       role="button"
       aria-label="Locate me"
-      class="pe-location-fetch css-ZSBbY opacity-30 hover:opacity-90"
+      className="pe-location-fetch css-ZSBbY opacity-30 hover:opacity-90"
     >
       <path d="M10.5 13.5L.5 11 21 3l-8 20.5-2.5-10z"></path>
     </svg>

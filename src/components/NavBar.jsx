@@ -39,12 +39,18 @@ const NavBar = ({ menuOpen, handleMenuOpen }) => {
             <span className="font-[500] cursor-pointer">Products</span>
           </div>
           <div className="flex items-center gap-1">
-            <button className="font-[500] cursor-pointer flex justify-center w-[70px] p-2 hover:bg-zinc-800 rounded-full">
+            <Link
+              to={"/auth/login"}
+              className="font-[500] cursor-pointer flex justify-center w-[70px] p-2 hover:bg-zinc-800 rounded-full"
+            >
               Log in
-            </button>
-            <button className="font-[500] text-black cursor-pointer flex justify-center w-[70px] p-2 bg-white hover:bg-zinc-200 rounded-full">
+            </Link>
+            <Link
+              to={"/auth/register"}
+              className="font-[500] text-black cursor-pointer flex justify-center w-[70px] p-2 bg-white hover:bg-zinc-200 rounded-full"
+            >
               Sign up
-            </button>
+            </Link>
           </div>
 
           <button
